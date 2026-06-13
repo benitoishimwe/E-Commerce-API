@@ -15,10 +15,11 @@ const {
 } = require('../controllers/productController');
 
 const { getSingleProductReviews } = require('../controllers/reviewController');
+const { validateProduct } = require('../middleware/validate');
 
 router
   .route('/')
-  .post([authenticateUser, authorizePermissions('admin')], createProduct)
+  .post([authenticateUser, authorizePermissions('admin'), validateProduct], createProduct)
   .get(getAllProducts);
 
 router

@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "test": "jest --testEnvironment node --forceExit"
   },
   "author": "",
   "license": "ISC",
@@ -29,7 +30,9 @@
     "xss-clean": "^0.1.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.9"
+    "jest": "^30.4.2",
+    "nodemon": "^2.0.9",
+    "supertest": "^7.2.2"
   },
   "engines": {
     "node": "14.x"
